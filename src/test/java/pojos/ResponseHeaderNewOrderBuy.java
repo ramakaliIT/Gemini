@@ -1,7 +1,7 @@
 package pojos;
 
-import io.cucumber.messages.internal.com.google.gson.annotations.Expose;
-import io.cucumber.messages.internal.com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class ResponseHeaderNewOrderBuy {
 
@@ -15,7 +15,7 @@ public class ResponseHeaderNewOrderBuy {
 
     @SerializedName("Content-Type")
     @Expose
-    private int contenType;
+    private String contentType;
 
     @SerializedName("Content-Length")
     @Expose
@@ -25,12 +25,18 @@ public class ResponseHeaderNewOrderBuy {
     @Expose
     private String vary;
 
-    public ResponseHeaderNewOrderBuy(String server, String date, int contenType, String contentLength, String vary) {
-        this.server = server;
-        this.date = date;
-        this.contenType = contenType;
-        this.contentLength = contentLength;
-        this.vary = vary;
+    @SerializedName("body")
+    @Expose
+    private ResponseBodyNewOrderBuy responseBody;
+
+
+    public ResponseHeaderNewOrderBuy(String server, String date, String contentType, String contentLength, String vary, ResponseBodyNewOrderBuy responseBody) {
+        setServer(server);
+        setDate(date);
+        setContentType(contentType);
+        setContentLength(contentLength);
+        setVary(vary);
+        setResponseBody(responseBody);
     }
 
     public ResponseHeaderNewOrderBuy() {
@@ -52,12 +58,12 @@ public class ResponseHeaderNewOrderBuy {
         this.date = date;
     }
 
-    public int getContenType() {
-        return contenType;
+    public String getContentType() {
+        return contentType;
     }
 
-    public void setContenType(int contenType) {
-        this.contenType = contenType;
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
     }
 
     public String getContentLength() {
@@ -78,12 +84,34 @@ public class ResponseHeaderNewOrderBuy {
 
     @Override
     public String toString() {
-        return "{" +
-                "server='" + server + '\'' +
-                ", date='" + date + '\'' +
-                ", contenType=" + contenType +
-                ", contentLength='" + contentLength + '\'' +
-                ", vary='" + vary + '\'' +
+        return "{\n" +
+                "server='" + server + ",\n" +
+                "date='" + date + ",\n" +
+                "contenType=" + contentType +",\n" +
+                "contentLength='" + contentLength + ",\n" +
+                "contentLength='" + contentLength + ",\n" +
+                "vary='" + vary + ",\n" +
+                "body: [\n"+
+                "\n]\n"+
                 '}';
+    }
+
+    public String getHeaders() {
+        return "{\n" +
+                "server=" + server + "\n" +
+                "date= " + date + ",\n" +
+                "contenType= " + contentType +",\n" +
+                "contentLength= " + contentLength + ",\n" +
+                "contentLength= " + contentLength + ",\n" +
+                "vary='" + vary + ",\n" +
+                '}';
+    }
+
+    public ResponseBodyNewOrderBuy getResponseBody() {
+        return responseBody;
+    }
+
+    public void setResponseBody(ResponseBodyNewOrderBuy responseBody) {
+        this.responseBody = responseBody;
     }
 }

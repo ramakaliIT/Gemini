@@ -7,7 +7,7 @@ public class DBUtils {
     public static Statement statement;
     public static ResultSet resultSet;
     private static String username = "sa";
-    private static String password = "S202048s!";
+    private static String password = "";
     public static String url = "jdbc:sqlserver://KALILAPTOP\\SQLEXPRESS;";
 
     public static ResultSet executeQuery(String query) throws SQLException {

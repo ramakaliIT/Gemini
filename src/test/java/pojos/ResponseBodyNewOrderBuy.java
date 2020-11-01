@@ -1,13 +1,16 @@
 package pojos;
 
-import io.cucumber.messages.internal.com.google.gson.annotations.Expose;
-import io.cucumber.messages.internal.com.google.gson.annotations.SerializedName;
+
+
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 public class ResponseBodyNewOrderBuy {
 
-    @SerializedName("client_order_id")
+    @SerializedName("order_id")
     @Expose
     private String orderId;
 
@@ -87,6 +90,8 @@ public class ResponseBodyNewOrderBuy {
     @Expose
     private String remaining_amount;
 
+    private int statusCode;
+
     public ResponseBodyNewOrderBuy() {
     }
 
@@ -96,7 +101,8 @@ public class ResponseBodyNewOrderBuy {
                                    String timestampms, boolean isLive, boolean isCancelled,
                                    boolean isHidden, boolean wasForced, String executedAmount,
                                    String client_order_id, String reason, List<String> options,
-                                   String price, String originalAmount, String remaining_amount) {
+                                   String price, String originalAmount, String remaining_amount,
+                                   int statusCode) {
 
         setOrderId(orderId);
         setId(id);
@@ -118,7 +124,7 @@ public class ResponseBodyNewOrderBuy {
         setPrice(price);
         setOriginalAmount(originalAmount);
         setRemaining_amount(remaining_amount);
-
+        setStatusCode(statusCode);
     }
 
     public String getOrderId() {
@@ -283,7 +289,7 @@ public class ResponseBodyNewOrderBuy {
 
     @Override
     public String toString() {
-        return "{" +
+        return "StatusCode(): " + getStatusCode() + "\n{" +
                 "client_order_id: " + getOrderId() + ",\n" +
                 ", id: " + getId() + ",\n" +
                 ", symbol: " + getSymbol() + ",\n" +
@@ -293,17 +299,26 @@ public class ResponseBodyNewOrderBuy {
                 ", type: " + getType() + ",\n" +
                 ", timestamp: " + getTimestamp() + ",\n" +
                 ", timestampms: " + getTimestampms() + ",\n" +
-                ", is_live: " + isLive +",\n" +
-                ", is_cancelled: " + isCancelled+",\n" +
-                ", is_hidden: " + isHidden +",\n" +
-                ", wasForced: " + wasForced +",\n" +
+                ", is_live: " + isLive + ",\n" +
+                ", is_cancelled: " + isCancelled + ",\n" +
+                ", is_hidden: " + isHidden + ",\n" +
+                ", wasForced: " + wasForced + ",\n" +
                 ", executed_mount: " + getExecutedAmount() + ",\n" +
                 ", client_order_id: " + getClient_order_id() + ",\n" +
                 ", reason: " + getReason() + ",\n" +
-                ", options: " + getOptions() +",\n" +
+                ", options: " + getOptions() + ",\n" +
                 ", price: " + getPrice() + ",\n" +
                 ", originalAmount: " + getOriginalAmount() + ",\n" +
-                ", remaining_amount: " + getRemaining_amount()+ ",\n" +
+                ", remaining_amount: " + getRemaining_amount() + ",\n" +
                 '}';
+    }
+
+
+    public int getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(int statusCode) {
+        this.statusCode = statusCode;
     }
 }

@@ -1,1 +1,3021 @@
-[]
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "user enters standard new buy order datas",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters new order fixed valid datas",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersNewOrderFixedValidDatas()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-01T05:45:14.292Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 41,
+        "name": "TC_0002_user places a successful order than fails to attemp another order with the old nonce",
+        "description": "",
+        "id": "us-0001-user-cant-place-a-successful-new-buy-order-with-invalid-nonce-and-invalid-client-order-id-credentials;tc-0002-user-places-a-successful-order-than-fails-to-attemp-another-order-with-the-old-nonce;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user enters a valid APIKey \"apikey\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apikey\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPIKey(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters a valid symbol \"btcusd\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"btcusd\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidSymbol(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters a valid nonce 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_nonce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user enters a valid amount \"17\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"17\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user enters a valid min_amount \"8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"8\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_min_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enters a valid price \"13650\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"13650\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_price(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user enters a valid side \"buy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"buy\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_side(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enters a valid type \"exchange limit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"exchange limit\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidType(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user enters a valid option \"immediate-or-cancel\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"immediate-or-cancel\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_option(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user enters a valid accountname \"primary\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"primary\"",
+                  "offset": 32
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_accountname(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user enters a valid APISecret \"apisecret\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apisecret\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPISecret(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 455000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2735000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user verifies status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 188000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user verifies status code is 400, reason is \"InvalidNonce\" and message is \"has not increased\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 29
+                },
+                {
+                  "val": "\"InvalidNonce\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"has not increased\"",
+                  "offset": 74
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Negative"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user enters standard new buy order datas",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters new order fixed valid datas",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersNewOrderFixedValidDatas()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-01T05:45:17.889Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 42,
+        "name": "TC_0002_user places a successful order than fails to attemp another order with the old nonce",
+        "description": "",
+        "id": "us-0001-user-cant-place-a-successful-new-buy-order-with-invalid-nonce-and-invalid-client-order-id-credentials;tc-0002-user-places-a-successful-order-than-fails-to-attemp-another-order-with-the-old-nonce;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user enters a valid APIKey \"apikey\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apikey\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPIKey(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user enters a valid symbol \"random\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"random\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidSymbol(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enters a valid nonce 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_nonce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user enters a valid amount \"13\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"13\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user enters a valid min_amount \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_min_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user enters a valid price \"13650\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"13650\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_price(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user enters a valid side \"buy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"buy\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_side(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "user enters a valid type \"exchange limit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"exchange limit\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidType(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user enters a valid option \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_option(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user enters a valid accountname \"primary\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"primary\"",
+                  "offset": 32
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_accountname(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user enters a valid APISecret \"apisecret\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apisecret\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPISecret(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 198000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user verifies status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 194000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user verifies status code is 400, reason is \"InvalidNonce\" and message is \"has not increased\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 29
+                },
+                {
+                  "val": "\"InvalidNonce\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"has not increased\"",
+                  "offset": 74
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Negative"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user enters standard new buy order datas",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters new order fixed valid datas",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersNewOrderFixedValidDatas()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-01T05:45:18.342Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 79,
+        "name": "TC_00003_user places a successful order than fails to attemp another order with a smaller nonce",
+        "description": "",
+        "id": "us-0001-user-cant-place-a-successful-new-buy-order-with-invalid-nonce-and-invalid-client-order-id-credentials;tc-00003-user-places-a-successful-order-than-fails-to-attemp-another-order-with-a-smaller-nonce;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "user enters a valid APIKey \"apikey\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apikey\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPIKey(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "user enters a valid symbol \"btcusd\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"btcusd\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidSymbol(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "user enters a valid nonce 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_nonce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "user enters a valid amount \"17\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"17\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "user enters a valid min_amount \"8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"8\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_min_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "user enters a valid price \"13650\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"13650\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_price(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "user enters a valid side \"buy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"buy\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_side(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "user enters a valid type \"exchange limit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"exchange limit\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidType(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "user enters a valid option \"immediate-or-cancel\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"immediate-or-cancel\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_option(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "user enters a valid accountname \"primary\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"primary\"",
+                  "offset": 32
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_accountname(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "user enters a valid APISecret \"apisecret\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apisecret\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPISecret(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 170000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "user verifies status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "user enters a smaller nonce than previous",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersASmallerNonceThanPrevious()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 183000000,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "user verifies status code is 400, reason is \"InvalidNonce\" and message is \"has not increased\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 29
+                },
+                {
+                  "val": "\"InvalidNonce\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"has not increased\"",
+                  "offset": 74
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Negative"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user enters standard new buy order datas",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters new order fixed valid datas",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersNewOrderFixedValidDatas()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-01T05:45:18.730Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 80,
+        "name": "TC_00003_user places a successful order than fails to attemp another order with a smaller nonce",
+        "description": "",
+        "id": "us-0001-user-cant-place-a-successful-new-buy-order-with-invalid-nonce-and-invalid-client-order-id-credentials;tc-00003-user-places-a-successful-order-than-fails-to-attemp-another-order-with-a-smaller-nonce;;3",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "user enters a valid APIKey \"apikey\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apikey\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPIKey(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "user enters a valid symbol \"random\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"random\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidSymbol(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "user enters a valid nonce 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_nonce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "user enters a valid amount \"38\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"38\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "user enters a valid min_amount \"7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_min_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "user enters a valid price \"13650\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"13650\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_price(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "user enters a valid side \"buy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"buy\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_side(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "user enters a valid type \"exchange limit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"exchange limit\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidType(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "user enters a valid option \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_option(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "user enters a valid accountname \"primary\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"primary\"",
+                  "offset": 32
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_accountname(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "user enters a valid APISecret \"apisecret\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apisecret\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPISecret(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 169000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "user verifies status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "user enters a smaller nonce than previous",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersASmallerNonceThanPrevious()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 160000000,
+              "status": "passed"
+            },
+            "line": 71,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "user verifies status code is 400, reason is \"InvalidNonce\" and message is \"has not increased\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 29
+                },
+                {
+                  "val": "\"InvalidNonce\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"has not increased\"",
+                  "offset": 74
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Negative"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user enters standard new buy order datas",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters new order fixed valid datas",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersNewOrderFixedValidDatas()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-01T05:45:19.083Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 81,
+        "name": "TC_00003_user places a successful order than fails to attemp another order with a smaller nonce",
+        "description": "",
+        "id": "us-0001-user-cant-place-a-successful-new-buy-order-with-invalid-nonce-and-invalid-client-order-id-credentials;tc-00003-user-places-a-successful-order-than-fails-to-attemp-another-order-with-a-smaller-nonce;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "user enters a valid APIKey \"apikey\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apikey\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPIKey(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "user enters a valid symbol \"random\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"random\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidSymbol(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "user enters a valid nonce 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_nonce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "user enters a valid amount \"29\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"29\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "user enters a valid min_amount \"10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_min_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "user enters a valid price \"13650\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"13650\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_price(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "user enters a valid side \"buy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"buy\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_side(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "user enters a valid type \"exchange limit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"exchange limit\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidType(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "user enters a valid option \"fill-0r-kill\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"fill-0r-kill\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_option(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "user enters a valid accountname \"primary\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"primary\"",
+                  "offset": 32
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_accountname(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "user enters a valid APISecret \"apisecret\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apisecret\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPISecret(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 161000000,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c200\u003e but was:\u003c400\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(PlaceNewBuyOrderSteps.java:142)\r\n\tat ✽.user verifies status code is 200(file:///C:/Users/ramaz/IdeaProjects/InterviewsFolder/GeminiTest01/src/test/resources/features/NewOrder/newbuyorder/nonce_negative_test.feature:67)\r\n",
+              "duration": 2000000,
+              "status": "failed"
+            },
+            "line": 67,
+            "name": "user verifies status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 68,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 69,
+            "name": "user enters a smaller nonce than previous",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersASmallerNonceThanPrevious()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 70,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 71,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 72,
+            "name": "user verifies status code is 400, reason is \"InvalidNonce\" and message is \"has not increased\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 29
+                },
+                {
+                  "val": "\"InvalidNonce\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"has not increased\"",
+                  "offset": 74
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Negative"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user enters standard new buy order datas",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters new order fixed valid datas",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersNewOrderFixedValidDatas()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-01T05:45:19.277Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 115,
+        "name": "TC_00004_user places a successful order than fails",
+        "description": "                  to attemp another order with a repeated client order id",
+        "id": "us-0001-user-cant-place-a-successful-new-buy-order-with-invalid-nonce-and-invalid-client-order-id-credentials;tc-00004-user-places-a-successful-order-than-fails;;2",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "user enters a valid APIKey \"apikey\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apikey\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPIKey(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "user enters a valid symbol \"random\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"random\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidSymbol(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user enters a valid nonce 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_nonce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "user enters a valid amount \"17\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"17\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "user enters a valid min_amount \"8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"8\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_min_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "user enters a valid price \"13650\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"13650\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_price(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "user enters a valid side \"buy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"buy\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_side(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "user enters a valid type \"exchange limit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"exchange limit\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidType(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "user enters a valid option \"immediate-or-cancel\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"immediate-or-cancel\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_option(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "user enters a valid accountname \"primary\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"primary\"",
+                  "offset": 32
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_accountname(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 101,
+            "name": "user enters a valid APISecret \"apisecret\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apisecret\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPISecret(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 177000000,
+              "status": "passed"
+            },
+            "line": 103,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 104,
+            "name": "user verifies status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "user enters a valid nonce 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_nonce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 107,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 182000000,
+              "status": "passed"
+            },
+            "line": 108,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(PlaceNewBuyOrderSteps.java:148)\r\n\tat ✽.user verifies status code is 400, reason is \"InvalidNonce\" and message is \"has not increased\"(file:///C:/Users/ramaz/IdeaProjects/InterviewsFolder/GeminiTest01/src/test/resources/features/NewOrder/newbuyorder/nonce_negative_test.feature:109)\r\n",
+              "duration": 1000000,
+              "status": "failed"
+            },
+            "line": 109,
+            "name": "user verifies status code is 400, reason is \"InvalidNonce\" and message is \"has not increased\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 29
+                },
+                {
+                  "val": "\"InvalidNonce\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"has not increased\"",
+                  "offset": 74
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Negative"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user enters standard new buy order datas",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters new order fixed valid datas",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersNewOrderFixedValidDatas()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-01T05:45:19.676Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 116,
+        "name": "TC_00004_user places a successful order than fails",
+        "description": "                  to attemp another order with a repeated client order id",
+        "id": "us-0001-user-cant-place-a-successful-new-buy-order-with-invalid-nonce-and-invalid-client-order-id-credentials;tc-00004-user-places-a-successful-order-than-fails;;3",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "user enters a valid APIKey \"apikey\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apikey\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPIKey(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "user enters a valid symbol \"random\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"random\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidSymbol(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user enters a valid nonce 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_nonce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "user enters a valid amount \"38\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"38\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "user enters a valid min_amount \"7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_min_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "user enters a valid price \"13650\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"13650\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_price(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "user enters a valid side \"buy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"buy\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_side(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "user enters a valid type \"exchange limit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"exchange limit\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidType(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "user enters a valid option \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_option(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "user enters a valid accountname \"primary\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"primary\"",
+                  "offset": 32
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_accountname(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 101,
+            "name": "user enters a valid APISecret \"apisecret\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apisecret\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPISecret(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 155000000,
+              "status": "passed"
+            },
+            "line": 103,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 104,
+            "name": "user verifies status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 106,
+            "name": "user enters a valid nonce 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_nonce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 107,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 203000000,
+              "status": "passed"
+            },
+            "line": 108,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c400\u003e but was:\u003c406\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(PlaceNewBuyOrderSteps.java:148)\r\n\tat ✽.user verifies status code is 400, reason is \"InvalidNonce\" and message is \"has not increased\"(file:///C:/Users/ramaz/IdeaProjects/InterviewsFolder/GeminiTest01/src/test/resources/features/NewOrder/newbuyorder/nonce_negative_test.feature:109)\r\n",
+              "status": "failed"
+            },
+            "line": 109,
+            "name": "user verifies status code is 400, reason is \"InvalidNonce\" and message is \"has not increased\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 29
+                },
+                {
+                  "val": "\"InvalidNonce\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"has not increased\"",
+                  "offset": 74
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Negative"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user enters standard new buy order datas",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters new order fixed valid datas",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersNewOrderFixedValidDatas()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-01T05:45:20.078Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 117,
+        "name": "TC_00004_user places a successful order than fails",
+        "description": "                  to attemp another order with a repeated client order id",
+        "id": "us-0001-user-cant-place-a-successful-new-buy-order-with-invalid-nonce-and-invalid-client-order-id-credentials;tc-00004-user-places-a-successful-order-than-fails;;4",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 88,
+            "name": "user enters a valid APIKey \"apikey\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apikey\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPIKey(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 90,
+            "name": "user enters a valid symbol \"random\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"random\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidSymbol(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "user enters a valid nonce 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_nonce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "user enters a valid client order id \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_client_order_id(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "user enters a valid amount \"29\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"29\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "user enters a valid min_amount \"10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 31
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_min_amount(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "user enters a valid price \"13650\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"13650\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_price(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "user enters a valid side \"buy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"buy\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_side(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "user enters a valid type \"exchange limit\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"exchange limit\"",
+                  "offset": 25
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidType(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "user enters a valid option \"fill-0r-kill\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"fill-0r-kill\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_option(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 100,
+            "name": "user enters a valid accountname \"primary\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"primary\"",
+                  "offset": 32
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_accountname(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 101,
+            "name": "user enters a valid APISecret \"apisecret\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"apisecret\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userEntersAValidAPISecret(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 102,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 194000000,
+              "status": "passed"
+            },
+            "line": 103,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected:\u003c200\u003e but was:\u003c400\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(PlaceNewBuyOrderSteps.java:142)\r\n\tat ✽.user verifies status code is 200(file:///C:/Users/ramaz/IdeaProjects/InterviewsFolder/GeminiTest01/src/test/resources/features/NewOrder/newbuyorder/nonce_negative_test.feature:104)\r\n",
+              "status": "failed"
+            },
+            "line": 104,
+            "name": "user verifies status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 106,
+            "name": "user enters a valid nonce 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "0",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.user_enters_a_valid_nonce(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 107,
+            "name": "system creates payload and signatures",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.system_creates_payload_and_signatures()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 108,
+            "name": "user posts the new buy order request",
+            "match": {
+              "location": "steps.PlaceNewBuyOrderSteps.userPostsTheNewBuyOrderRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 109,
+            "name": "user verifies status code is 400, reason is \"InvalidNonce\" and message is \"has not increased\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 29
+                },
+                {
+                  "val": "\"InvalidNonce\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"has not increased\"",
+                  "offset": 74
+                }
+              ],
+              "location": "steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(int,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Negative"
+          }
+        ]
+      }
+    ],
+    "name": "US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials",
+    "description": "",
+    "id": "us-0001-user-cant-place-a-successful-new-buy-order-with-invalid-nonce-and-invalid-client-order-id-credentials",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/NewOrder/newbuyorder/nonce_negative_test.feature",
+    "tags": [
+      {
+        "name": "@Negative",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

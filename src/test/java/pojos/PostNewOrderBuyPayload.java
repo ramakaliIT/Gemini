@@ -3,7 +3,7 @@ package pojos;
 public class PostNewOrderBuyPayload {
 
     private String request;
-    private int nonce;
+    private long nonce;
     private String clientOrderId;
     private String symbol;
     private String amount;
@@ -19,7 +19,7 @@ public class PostNewOrderBuyPayload {
     }
 
     public PostNewOrderBuyPayload(String request,
-                                  int nonce,
+                                  long nonce,
                                   String clientOrderId,
                                   String symbol,
                                   String amount,
@@ -54,11 +54,11 @@ public class PostNewOrderBuyPayload {
         this.request = request;
     }
 
-    public int getNonce() {
+    public long getNonce() {
         return nonce;
     }
 
-    public void setNonce(int nonce) {
+    public void setNonce(long nonce) {
         this.nonce = nonce;
     }
 
