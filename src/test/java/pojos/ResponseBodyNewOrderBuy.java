@@ -291,25 +291,25 @@ public class ResponseBodyNewOrderBuy {
     public String toString() {
         return "StatusCode(): " + getStatusCode() + "\n{" +
                 "client_order_id: " + getOrderId() + ",\n" +
-                ", id: " + getId() + ",\n" +
-                ", symbol: " + getSymbol() + ",\n" +
-                ", exchange: " + getExchange() + ",\n" +
-                ", avg_execution_price: '" + getAvgExecutionPrice() + ",\n" +
-                ", side: " + getSide() + ",\n" +
-                ", type: " + getType() + ",\n" +
-                ", timestamp: " + getTimestamp() + ",\n" +
-                ", timestampms: " + getTimestampms() + ",\n" +
-                ", is_live: " + isLive + ",\n" +
-                ", is_cancelled: " + isCancelled + ",\n" +
-                ", is_hidden: " + isHidden + ",\n" +
-                ", wasForced: " + wasForced + ",\n" +
-                ", executed_mount: " + getExecutedAmount() + ",\n" +
-                ", client_order_id: " + getClient_order_id() + ",\n" +
-                ", reason: " + getReason() + ",\n" +
-                ", options: " + getOptions() + ",\n" +
-                ", price: " + getPrice() + ",\n" +
-                ", originalAmount: " + getOriginalAmount() + ",\n" +
-                ", remaining_amount: " + getRemaining_amount() + ",\n" +
+                "id: " + getId() + ",\n" +
+                "symbol: " + getSymbol() + ",\n" +
+                "exchange: " + getExchange() + ",\n" +
+                "avg_execution_price: '" + getAvgExecutionPrice() + ",\n" +
+                "side: " + getSide() + ",\n" +
+                "type: " + getType() + ",\n" +
+                "timestamp: " + getTimestamp() + ",\n" +
+                "timestampms: " + getTimestampms() + ",\n" +
+                "is_live: " + isLive + ",\n" +
+                "is_cancelled: " + isCancelled + ",\n" +
+                "is_hidden: " + isHidden + ",\n" +
+                "wasForced: " + wasForced + ",\n" +
+                "executed_mount: " + getExecutedAmount() + ",\n" +
+                "client_order_id: " + getClient_order_id() + ",\n" +
+                "reason: " + getReason() + ",\n" +
+                "options: " + getOptions() + ",\n" +
+                "price: " + getPrice() + ",\n" +
+                "originalAmount: " + getOriginalAmount() + ",\n" +
+                "remaining_amount: " + getRemaining_amount() + ",\n" +
                 '}';
     }
 

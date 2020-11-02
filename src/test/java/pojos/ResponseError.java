@@ -16,15 +16,16 @@ public class ResponseError {
     @Expose
     private String message;
 
-    @SerializedName("statuscode")
-    @Expose
     private String statusCode;
 
-    public ResponseError(String result, String reason, String message, String statusCode) {
-        this.result = result;
-        this.reason = reason;
-        this.message = message;
-        this.statusCode = statusCode;
+    public ResponseError(String result,
+                         String reason,
+                         String message,
+                         String statusCode) {
+     setResult(result);
+     setReason(reason);
+     setMessage(message);
+     setStatusCode(statusCode);
     }
 
     public ResponseError() {
@@ -32,7 +33,7 @@ public class ResponseError {
 
     @Override
     public String toString() {
-        return "ResponseError{" +
+        return "\nError: {\n" +
                 "result= " + result + ",\n" +
                 "reason=" + reason + ",\n" +
                 "message=" + message + ",\n" +

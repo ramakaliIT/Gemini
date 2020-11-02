@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="6.512">
-<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_0002_user places a successful order than fails to attemp another order with the old nonce" time="3.553">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="10" time="7.028">
+<testcase classname="testing the client order id boundary values in neworder module" name="TC_00004_user should be able to place places a successful order than places another order with the same client order id" time="3.275">
+<system-out><![CDATA[Given user enters new order fixed valid datas...............................passed
+Then user enters a valid APIKey "apikey"....................................passed
+Then user enters a valid symbol "random"....................................passed
+Then user enters a valid nonce 0............................................passed
+Then user enters a valid client order id "".................................passed
+Then user enters a valid amount "10"........................................passed
+Then user enters a valid min_amount "8".....................................passed
+Then user enters a valid price "500"........................................passed
+Then user enters a valid side "buy".........................................passed
+Then user enters a valid type "exchange limit"..............................passed
+Then user enters a valid option "immediate-or-cancel".......................passed
+Then user enters a valid accountname "primary"..............................passed
+Then user enters a valid APISecret "apisecret"..............................passed
+Then system creates payload and signatures..................................passed
+When user posts the new buy order request...................................passed
+Then user verifies status code is 200.......................................passed
+Then user enters a valid nonce 0............................................passed
+Then system creates payload and signatures..................................passed
+When user posts the new buy order request...................................passed
+Then user verifies status code is 200.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="testing the client order id boundary values in neworder module" name="TC_00004_user should be able to place places a successful order than places another order with the same client order id 2" time="0.188">
+<failure message="{&quot;result&quot;:&quot;error&quot;,&quot;reason&quot;:&quot;InvalidSymbol&quot;,&quot;message&quot;:&quot;Received unsupported symbol 'btceur'&quot;} expected:&lt;200&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[Given user enters new order fixed valid datas...............................passed
+Then user enters a valid APIKey "apikey"....................................passed
+Then user enters a valid symbol "random"....................................passed
+Then user enters a valid nonce 0............................................passed
+Then user enters a valid client order id "".................................passed
+Then user enters a valid amount "8".........................................passed
+Then user enters a valid min_amount "5".....................................passed
+Then user enters a valid price "250"........................................passed
+Then user enters a valid side "buy".........................................passed
+Then user enters a valid type "exchange limit"..............................passed
+Then user enters a valid option ""..........................................passed
+Then user enters a valid accountname "primary"..............................passed
+Then user enters a valid APISecret "apisecret"..............................passed
+Then system creates payload and signatures..................................passed
+When user posts the new buy order request...................................passed
+Then user verifies status code is 200.......................................failed
+Then user enters a valid nonce 0............................................skipped
+Then system creates payload and signatures..................................skipped
+When user posts the new buy order request...................................skipped
+Then user verifies status code is 200.......................................skipped
+
+StackTrace:
+java.lang.AssertionError: {"result":"error","reason":"InvalidSymbol","message":"Received unsupported symbol 'btceur'"} expected:<200> but was:<400>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(PlaceNewBuyOrderSteps.java:139)
+	at ✽.user verifies status code is 200(file:///C:/Users/ramaz/IdeaProjects/InterviewsFolder/GeminiTest01/src/test/resources/features/NewOrder/newbuyorder/newbuyorderClientOrderIdPositiveTest.feature:29)
+]]></failure>
+</testcase>
+<testcase classname="testing the client order id boundary values in neworder module" name="TC_00004_user should be able to place places a successful order than places another order with the same client order id 3" time="0.365">
+<system-out><![CDATA[Given user enters new order fixed valid datas...............................passed
+Then user enters a valid APIKey "apikey"....................................passed
+Then user enters a valid symbol "random"....................................passed
+Then user enters a valid nonce 0............................................passed
+Then user enters a valid client order id "".................................passed
+Then user enters a valid amount "6".........................................passed
+Then user enters a valid min_amount "4".....................................passed
+Then user enters a valid price "125"........................................passed
+Then user enters a valid side "buy".........................................passed
+Then user enters a valid type "exchange limit"..............................passed
+Then user enters a valid option "fill-or-kill"..............................passed
+Then user enters a valid accountname "primary"..............................passed
+Then user enters a valid APISecret "apisecret"..............................passed
+Then system creates payload and signatures..................................passed
+When user posts the new buy order request...................................passed
+Then user verifies status code is 200.......................................passed
+Then user enters a valid nonce 0............................................passed
+Then system creates payload and signatures..................................passed
+When user posts the new buy order request...................................passed
+Then user verifies status code is 200.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_0002_user places a successful order than fails to attemp another order with the old nonce" time="0.466">
 <system-out><![CDATA[Given user enters new order fixed valid datas...............................passed
 Then user enters a valid APIKey "apikey"....................................passed
 Then user enters a valid symbol "btcusd"....................................passed
@@ -23,7 +100,7 @@ When user posts the new buy order request...................................pass
 Then user verifies status code is 400, reason is "InvalidNonce" and message is "has not increased".passed
 ]]></system-out>
 </testcase>
-<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_0002_user places a successful order than fails to attemp another order with the old nonce 2" time="0.406">
+<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_0002_user places a successful order than fails to attemp another order with the old nonce 2" time="0.372">
 <system-out><![CDATA[Given user enters new order fixed valid datas...............................passed
 Then user enters a valid APIKey "apikey"....................................passed
 Then user enters a valid symbol "random"....................................passed
@@ -46,7 +123,7 @@ When user posts the new buy order request...................................pass
 Then user verifies status code is 400, reason is "InvalidNonce" and message is "has not increased".passed
 ]]></system-out>
 </testcase>
-<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_00003_user places a successful order than fails to attemp another order with a smaller nonce" time="0.364">
+<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_00003_user places a successful order than fails to attemp another order with a smaller nonce" time="0.36">
 <system-out><![CDATA[Given user enters new order fixed valid datas...............................passed
 Then user enters a valid APIKey "apikey"....................................passed
 Then user enters a valid symbol "btcusd"....................................passed
@@ -70,7 +147,7 @@ When user posts the new buy order request...................................pass
 Then user verifies status code is 400, reason is "InvalidNonce" and message is "has not increased".passed
 ]]></system-out>
 </testcase>
-<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_00003_user places a successful order than fails to attemp another order with a smaller nonce 2" time="0.344">
+<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_00003_user places a successful order than fails to attemp another order with a smaller nonce 2" time="0.381">
 <system-out><![CDATA[Given user enters new order fixed valid datas...............................passed
 Then user enters a valid APIKey "apikey"....................................passed
 Then user enters a valid symbol "random"....................................passed
@@ -94,8 +171,8 @@ When user posts the new buy order request...................................pass
 Then user verifies status code is 400, reason is "InvalidNonce" and message is "has not increased".passed
 ]]></system-out>
 </testcase>
-<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_00003_user places a successful order than fails to attemp another order with a smaller nonce 3" time="0.173">
-<failure message="expected:&lt;200&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[Given user enters new order fixed valid datas...............................passed
+<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_00003_user places a successful order than fails to attemp another order with a smaller nonce 3" time="0.361">
+<system-out><![CDATA[Given user enters new order fixed valid datas...............................passed
 Then user enters a valid APIKey "apikey"....................................passed
 Then user enters a valid symbol "random"....................................passed
 Then user enters a valid nonce 0............................................passed
@@ -105,30 +182,21 @@ Then user enters a valid min_amount "10"....................................pass
 Then user enters a valid price "13650"......................................passed
 Then user enters a valid side "buy".........................................passed
 Then user enters a valid type "exchange limit"..............................passed
-Then user enters a valid option "fill-0r-kill"..............................passed
+Then user enters a valid option "immediate-or-cancel".......................passed
 Then user enters a valid accountname "primary"..............................passed
 Then user enters a valid APISecret "apisecret"..............................passed
 Then system creates payload and signatures..................................passed
 When user posts the new buy order request...................................passed
-Then user verifies status code is 200.......................................failed
-Then user enters a valid client order id "".................................skipped
-Then user enters a smaller nonce than previous..............................skipped
-Then system creates payload and signatures..................................skipped
-When user posts the new buy order request...................................skipped
-Then user verifies status code is 400, reason is "InvalidNonce" and message is "has not increased".skipped
-
-StackTrace:
-java.lang.AssertionError: expected:<200> but was:<400>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(PlaceNewBuyOrderSteps.java:142)
-	at ✽.user verifies status code is 200(file:///C:/Users/ramaz/IdeaProjects/InterviewsFolder/GeminiTest01/src/test/resources/features/NewOrder/newbuyorder/nonce_negative_test.feature:67)
-]]></failure>
+Then user verifies status code is 200.......................................passed
+Then user enters a valid client order id "".................................passed
+Then user enters a smaller nonce than previous..............................passed
+Then system creates payload and signatures..................................passed
+When user posts the new buy order request...................................passed
+Then user verifies status code is 400, reason is "InvalidNonce" and message is "has not increased".passed
+]]></system-out>
 </testcase>
-<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_00004_user places a successful order than fails" time="0.369">
-<failure message="expected:&lt;400&gt; but was:&lt;200&gt;" type="java.lang.AssertionError"><![CDATA[Given user enters new order fixed valid datas...............................passed
+<testcase classname="Users should be able to place buy orders with valid credentials" name="TC_00001_As an admin, i must be able to place a buy order  with valid credentials" time="0.368">
+<system-out><![CDATA[Given user enters new order fixed valid datas...............................passed
 Then user enters a valid APIKey "apikey"....................................passed
 Then user enters a valid symbol "random"....................................passed
 Then user enters a valid nonce 0............................................passed
@@ -144,29 +212,16 @@ Then user enters a valid APISecret "apisecret"..............................pass
 Then system creates payload and signatures..................................passed
 When user posts the new buy order request...................................passed
 Then user verifies status code is 200.......................................passed
-Then user enters a valid nonce 0............................................passed
-Then system creates payload and signatures..................................passed
-When user posts the new buy order request...................................passed
-Then user verifies status code is 400, reason is "InvalidNonce" and message is "has not increased".failed
-
-StackTrace:
-java.lang.AssertionError: expected:<400> but was:<200>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(PlaceNewBuyOrderSteps.java:148)
-	at ✽.user verifies status code is 400, reason is "InvalidNonce" and message is "has not increased"(file:///C:/Users/ramaz/IdeaProjects/InterviewsFolder/GeminiTest01/src/test/resources/features/NewOrder/newbuyorder/nonce_negative_test.feature:109)
-]]></failure>
+]]></system-out>
 </testcase>
-<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_00004_user places a successful order than fails 2" time="0.371">
-<failure message="expected:&lt;400&gt; but was:&lt;406&gt;" type="java.lang.AssertionError"><![CDATA[Given user enters new order fixed valid datas...............................passed
+<testcase classname="Users should be able to place buy orders with valid credentials" name="TC_00001_As an admin, i must be able to place a buy order  with valid credentials 2" time="0.176">
+<system-out><![CDATA[Given user enters new order fixed valid datas...............................passed
 Then user enters a valid APIKey "apikey"....................................passed
 Then user enters a valid symbol "random"....................................passed
 Then user enters a valid nonce 0............................................passed
 Then user enters a valid client order id "".................................passed
-Then user enters a valid amount "38"........................................passed
-Then user enters a valid min_amount "7".....................................passed
+Then user enters a valid amount "13"........................................passed
+Then user enters a valid min_amount "5".....................................passed
 Then user enters a valid price "13650"......................................passed
 Then user enters a valid side "buy".........................................passed
 Then user enters a valid type "exchange limit"..............................passed
@@ -176,51 +231,6 @@ Then user enters a valid APISecret "apisecret"..............................pass
 Then system creates payload and signatures..................................passed
 When user posts the new buy order request...................................passed
 Then user verifies status code is 200.......................................passed
-Then user enters a valid nonce 0............................................passed
-Then system creates payload and signatures..................................passed
-When user posts the new buy order request...................................passed
-Then user verifies status code is 400, reason is "InvalidNonce" and message is "has not increased".failed
-
-StackTrace:
-java.lang.AssertionError: expected:<400> but was:<406>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at steps.PlaceNewBuyOrderSteps.userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(PlaceNewBuyOrderSteps.java:148)
-	at ✽.user verifies status code is 400, reason is "InvalidNonce" and message is "has not increased"(file:///C:/Users/ramaz/IdeaProjects/InterviewsFolder/GeminiTest01/src/test/resources/features/NewOrder/newbuyorder/nonce_negative_test.feature:109)
-]]></failure>
-</testcase>
-<testcase classname="US_0001_User cant place a successful new buy order with invalid nonce and invalid client_order_id credentials" name="TC_00004_user places a successful order than fails 3" time="0.195">
-<failure message="expected:&lt;200&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[Given user enters new order fixed valid datas...............................passed
-Then user enters a valid APIKey "apikey"....................................passed
-Then user enters a valid symbol "random"....................................passed
-Then user enters a valid nonce 0............................................passed
-Then user enters a valid client order id "".................................passed
-Then user enters a valid amount "29"........................................passed
-Then user enters a valid min_amount "10"....................................passed
-Then user enters a valid price "13650"......................................passed
-Then user enters a valid side "buy".........................................passed
-Then user enters a valid type "exchange limit"..............................passed
-Then user enters a valid option "fill-0r-kill"..............................passed
-Then user enters a valid accountname "primary"..............................passed
-Then user enters a valid APISecret "apisecret"..............................passed
-Then system creates payload and signatures..................................passed
-When user posts the new buy order request...................................passed
-Then user verifies status code is 200.......................................failed
-Then user enters a valid nonce 0............................................skipped
-Then system creates payload and signatures..................................skipped
-When user posts the new buy order request...................................skipped
-Then user verifies status code is 400, reason is "InvalidNonce" and message is "has not increased".skipped
-
-StackTrace:
-java.lang.AssertionError: expected:<200> but was:<400>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at steps.PlaceNewBuyOrderSteps.user_verifies_status_code_is_statuscode(PlaceNewBuyOrderSteps.java:142)
-	at ✽.user verifies status code is 200(file:///C:/Users/ramaz/IdeaProjects/InterviewsFolder/GeminiTest01/src/test/resources/features/NewOrder/newbuyorder/nonce_negative_test.feature:104)
-]]></failure>
+]]></system-out>
 </testcase>
 </testsuite>

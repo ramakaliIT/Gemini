@@ -16,10 +16,10 @@ import java.util.Random;
 import static io.restassured.RestAssured.given;
 
 public class PlaceNewBuyOrderSteps {
-    private PostNewOrderBuyHeader header=new PostNewOrderBuyHeader();
-    private PostNewOrderBuyPayload payload=new PostNewOrderBuyPayload();
-    private ResponseBodyNewOrderBuy responseBodyNewOrderBuy=new ResponseBodyNewOrderBuy();
-    private ResponseHeaderNewOrderBuy responseHeaderNewOrderBuy=new ResponseHeaderNewOrderBuy();
+    private PostNewOrderBuyHeader header = new PostNewOrderBuyHeader();
+    private PostNewOrderBuyPayload payload = new PostNewOrderBuyPayload();
+    private ResponseBodyNewOrderBuy responseBodyNewOrderBuy = new ResponseBodyNewOrderBuy();
+    private ResponseHeaderNewOrderBuy responseHeaderNewOrderBuy = new ResponseHeaderNewOrderBuy();
     private String payloadInBase64;
     private String signatureInSha384;
     private Response response;
@@ -31,6 +31,7 @@ public class PlaceNewBuyOrderSteps {
         header.setCacheControl("no-cache");
         header.setContent_type("text/plain");
     }
+
     @Then("user enters a valid APIKey {string}")
     public void userEntersAValidAPIKey(String arg0) {
         header.setxGeminiApikey(ConfigReader.getProperty(arg0));
@@ -39,18 +40,18 @@ public class PlaceNewBuyOrderSteps {
     @Then("user enters a valid symbol {string}")
     //This function gets a symbol randomly from the list of available symbols
     public void userEntersAValidSymbol(String arg0) {
-        if (arg0.equalsIgnoreCase("random")){
-            Random random =new Random();
+        if (arg0.equalsIgnoreCase("random")) {
+            Random random = new Random();
             payload.setSymbol(ReUsableMethods.getCoinList().get(random.nextInt(ReUsableMethods.getCoinList().size())));
         } else payload.setSymbol(arg0);
     }
 
     @Then("user enters a valid nonce {int}")
     public void user_enters_a_valid_nonce(int int1) {
-        String str="";
-        if(int1==0){
-        payload.setNonce(ReUsableMethods.generateNonce());}
-        else payload.setNonce(int1);
+        String str = "";
+        if (int1 == 0) {
+            payload.setNonce(ReUsableMethods.generateNonce());
+        } else payload.setNonce(int1);
     }
 
     @Then("user enters a valid client order id {string}")
@@ -90,12 +91,11 @@ public class PlaceNewBuyOrderSteps {
     public void user_enters_a_valid_option(String string) {
         // this transfer the option to payload. if string is set to random it selects from option list automatically
 
-        if(string.equalsIgnoreCase("random")){
-            Random random=new Random();
+        if (string.equalsIgnoreCase("random")) {
+            Random random = new Random();
             payload.setOptions(ReUsableMethods.
                     getOptionsList().get(random.nextInt(ReUsableMethods.getOptionsList().size())));
-        }
-        else payload.setOptions(string);
+        } else payload.setOptions(string);
     }
 
     @Then("user enters a valid stop_price {string}")
@@ -110,7 +110,7 @@ public class PlaceNewBuyOrderSteps {
 
     @Then("user enters a valid APISecret {string}")
     public void userEntersAValidAPISecret(String arg0) {
-        apiSecret=ConfigReader.getProperty("string");
+        apiSecret = ConfigReader.getProperty("string");
     }
 
     @Then("system creates payload and signatures")
@@ -130,39 +130,34 @@ public class PlaceNewBuyOrderSteps {
                 headers(header.getAsAMap()).
                 when().
                 post(payload.getRequest());
+        ResponseBodyNewOrderBuy responseBodyNewOrderBuy = response.as(ResponseBodyNewOrderBuy.class);
 
-        System.out.println("response Headers:");
-        System.out.println(response.getHeaders());
-        responseHeaderNewOrderBuy=response.as(ResponseHeaderNewOrderBuy.class);
-        System.out.println(responseHeaderNewOrderBuy);
     }
 
     @Then("user verifies status code is {int}")
     public void user_verifies_status_code_is_statuscode(int int1) {
-        Assert.assertEquals(200, response.getStatusCode());
+        Assert.assertEquals(response.getBody().print(), int1, response.getStatusCode());
     }
 
     @Then("user verifies status code is {int}, reason is {string} and message is {string}")
-    public void userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(int int1,String arg0, String arg1) {
-        // printing headers for tester verification
-        Assert.assertEquals(int1,response.getStatusCode());
+    public void userVerifiesStatusCodeIsFailedstatuscodeReasonIsAnd(int int1, String arg0, String arg1) {
 
-        // This gets response body to specially created Java ResponseError class for all error types....
-        ResponseError responseError=response.as(ResponseError.class);
+        Assert.assertEquals(response.getBody().prettyPrint(), int1, response.getStatusCode());
 
-        System.out.println(responseError.toString());
-        Assert.assertTrue(responseError.getReason().equalsIgnoreCase(arg0));
+        ResponseError responseError = response.as(ResponseError.class); // This gets response body to specially created Java ResponseError class for all error types....
+
+        Assert.assertTrue(response.getBody().prettyPrint(), responseError.getReason().equalsIgnoreCase(arg0));
 
     }
 
     @Then("user enters a smaller nonce than previous")
     public void userEntersASmallerNonceThanPrevious() {
-
-        long oldNonce=payload.getNonce();
-        System.out.println("old nonce: "+oldNonce);
-        Random random=new Random();
-        long newNonce= oldNonce-random.nextInt(10000000)-1000;
-        System.out.println("new nonce: "+newNonce);
+        // get previous nonce value
+        long oldNonce = payload.getNonce();
+        System.out.println("old nonce: " + oldNonce);
+        Random random = new Random();
+        long newNonce = (Long)(oldNonce/1000);
+        System.out.println("new nonce: " + newNonce);
         payload.setNonce(newNonce);
     }
 
